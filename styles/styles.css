@@ -1,0 +1,296 @@
+/*////////////////////////
+
+
+/*Paars #5722CD;
+Blauw #4845E4;
+Roze #ED4385;
+Zwart #0C0C0C (voor standaard tekst);
+Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:
+                                                                                 Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
+Grijs #7A7A7A (voor de service-tegel tekst);*/
+/*//////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a, a:link {
+    color: #5722CD;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300&display=swap');
+h1 h2 h3 h4 h5 {
+    font-family: 'Merriweather', serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+}
+
+h5 {
+    color: #5722CD;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.outer-container2 p {
+    color: black;
+    margin-top: 20px;
+}
+
+.outer-container1 h1 {
+    max-width: 500px;
+}
+
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+
+.outer-container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 50px 100px 50px 100px;
+    row-gap: 20px;
+}
+
+.outer-container2 {
+    color: #5722CD;
+    max-width: 40%;
+
+}
+
+button {
+    background-color: #ED4385;
+    border-radius: 25px;
+    color: white;
+    padding: 10px;
+    padding-inline: 20px;
+    text-transform: uppercase;
+    font-size: 8px;
+}
+
+.squiggle-line img {
+    max-width: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.image-wrapper {
+    max-width: 550px;
+}
+
+.image-wrapper img {
+    width: 100%;
+}
+
+.squiggle {
+    position: absolute;
+    top: 90%;
+    right: 48%;
+}
+
+.icon {
+    height: 50px;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: #4845E4;
+    color: white;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+}
+
+ul {
+    display: flex;
+    column-gap: 40px;
+    list-style: none;
+    align-items: center;
+    margin: 10px;
+}
+
+
+/* --------------- 4.2 Introduction ------------------- */
+
+
+/*---------------------section 2--------------------------*/
+
+article {
+    display: flex;
+    justify-content: center;
+}
+
+.outer-container3 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200px;
+    justify-content: center;
+    background-color: #F3F6F9;
+    padding: 10px 50px 10px 50px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.inner-container2 {
+    display: flex;
+    padding: 80px;
+
+}
+
+.inner-container3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    width: 40%;
+}
+
+
+.middle-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.link {
+    text-transform: uppercase;
+    color: #5722CD;
+    font-size: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+/*--------------------------------section 3 -----------------*/
+
+.services {
+    display: flex;
+    margin: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px;
+}
+
+.individual-service {
+    display: flex;
+    flex-direction: column;
+    border: solid #5722CD;
+    max-width: 30%;
+    padding: 20px;
+}
+
+.image-wrapper2 {
+    max-width: 50px;
+}
+
+
+/*----------------------form-------------------------------*/
+
+section:nth-child(4) {
+    background-color: #4845E4;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    justify-content: space-between;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 50px;
+}
+
+input[type=text] {
+    width: 500px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+input[type=submit] {
+    background-color: #ED4385;
+    border-radius: 25px;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100px;
+    align-self: center;
+}
+
+
+/* ---------------------footer---------------------------*/
+
+footer {
+    display: flex;
+    background-color: black;
+    height: 30px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
