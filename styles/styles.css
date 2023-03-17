@@ -1,0 +1,347 @@
+/*////////////////////////
+
+
+/*Paars #5722CD;
+Blauw #4845E4;
+Roze #ED4385;
+Zwart #0C0C0C (voor standaard tekst);
+Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:
+                                                                                 Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
+Grijs #7A7A7A (voor de service-tegel tekst);*/
+/*//////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container-section1 a:link {
+    color: #5722CD;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300&display=swap');
+h1 h2 h3 h4 h5 {
+    font-family: 'Merriweather', serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+}
+
+h5 {
+    color: #5722CD;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.container2-section1 p {
+    color: black;
+    margin-top: 20px;
+}
+
+.container-section1 h1 {
+    max-width: 500px;
+}
+
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+.squiggle-line img {
+    max-width: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.squiggle {
+    position: absolute;
+    top: 90%;
+    right: 48%;
+}
+
+.icon {
+    height: 50px;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    display: flex;
+    flex-direction: column;
+    background: rgb(72, 69, 228);
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(80, 50, 216, 1) 50%, rgba(87, 34, 205, 1) 100%);
+    color: white;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+}
+
+ul {
+    display: flex;
+    column-gap: 40px;
+    list-style: none;
+    align-items: center;
+    margin: 10px;
+}
+
+nav a:link {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: white;
+}
+
+button {
+    background-color: #ED4385;
+    border-radius: 25px;
+    color: white;
+    padding: 10px;
+    padding-inline: 20px;
+    text-transform: uppercase;
+    font-size: 8px;
+}
+
+
+/* --------------- 4.2 Introduction ------------------- */
+
+
+.container-section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 50px 100px 50px 100px;
+    row-gap: 20px;
+    color: white;
+}
+
+.container2-section1 {
+    color: #5722CD;
+    max-width: 40%;
+
+}
+
+/*---------------------section 2--------------------------*/
+
+.container-section2 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200px;
+    justify-content: center;
+    background-color: #F3F6F9;
+    padding: 10px 50px 10px 50px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+
+article {
+    display: flex;
+    justify-content: center;
+}
+
+
+.inner-container-section2 {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    flex-grow: 1;
+
+}
+
+.inner-container2-section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    width: 40%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.image-wrapper img {
+    width: 100%;
+}
+
+
+.inner-container-section2:nth-child(2) {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.link {
+    text-transform: uppercase;
+    color: #5722CD;
+    font-size: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+/*--------------------------------section 3 -----------------*/
+
+.container-section3 {
+    display: flex;
+    margin: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px;
+}
+
+.service-tegel {
+    display: flex;
+    flex-direction: column;
+    border: solid #5722CD;
+    width: 30%;
+    flex-basis: 250px;
+    padding: 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.21);
+}
+
+.image-wrapper2 {
+    max-width: 50px;
+}
+
+
+/*----------------------form-------------------------------*/
+
+section:nth-child(4) {
+    background: rgb(72, 69, 228);
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(80, 50, 216, 1) 50%, rgba(87, 34, 205, 1) 100%);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    width: 60%;
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    justify-content: space-between;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 50px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=submit] {
+    background-color: #ED4385;
+    border-radius: 25px;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100px;
+    align-self: center;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+
+}
+
+/* ---------------------footer---------------------------*/
+
+footer {
+    display: flex;
+    background-color: black;
+    height: 30px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+@media screen and (min-width: 768px) {
+    .inner-container-section2 {
+        flex-wrap: nowrap;
+    }
+}
