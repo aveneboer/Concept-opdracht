@@ -30,7 +30,7 @@ Grijs #7A7A7A (voor de service-tegel tekst);*/
     margin: 0;
 }
 
-a, a:link {
+.container-section1 a:link {
     color: #5722CD;
     text-decoration: none;
 }
@@ -59,12 +59,12 @@ h5 {
     margin-bottom: 5px;
 }
 
-.outer-container2 p {
+.container2-section1 p {
     color: black;
     margin-top: 20px;
 }
 
-.outer-container1 h1 {
+.container-section1 h1 {
     max-width: 500px;
 }
 
@@ -74,45 +74,12 @@ h5 {
 
 /* --------------- 3.1 Reusables ----------------------- */
 
-
-.outer-container1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 50px 100px 50px 100px;
-    row-gap: 20px;
-}
-
-.outer-container2 {
-    color: #5722CD;
-    max-width: 40%;
-
-}
-
-button {
-    background-color: #ED4385;
-    border-radius: 25px;
-    color: white;
-    padding: 10px;
-    padding-inline: 20px;
-    text-transform: uppercase;
-    font-size: 8px;
-}
-
 .squiggle-line img {
     max-width: 30px;
     margin-bottom: 20px;
     margin-top: 20px;
 }
 
-.image-wrapper {
-    max-width: 550px;
-}
-
-.image-wrapper img {
-    width: 100%;
-}
 
 .squiggle {
     position: absolute;
@@ -134,7 +101,8 @@ button {
 header {
     display: flex;
     flex-direction: column;
-    background-color: #4845E4;
+    background: rgb(72, 69, 228);
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(80, 50, 216, 1) 50%, rgba(87, 34, 205, 1) 100%);
     color: white;
     flex-grow: 1;
     flex-shrink: 1;
@@ -158,18 +126,48 @@ ul {
     margin: 10px;
 }
 
+nav a:link {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: white;
+}
+
+button {
+    background-color: #ED4385;
+    border-radius: 25px;
+    color: white;
+    padding: 10px;
+    padding-inline: 20px;
+    text-transform: uppercase;
+    font-size: 8px;
+}
+
 
 /* --------------- 4.2 Introduction ------------------- */
 
 
-/*---------------------section 2--------------------------*/
-
-article {
+.container-section1 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 50px 100px 50px 100px;
+    row-gap: 20px;
+    color: white;
 }
 
-.outer-container3 {
+.container2-section1 {
+    color: #5722CD;
+    max-width: 40%;
+
+}
+
+/*---------------------section 2--------------------------*/
+
+.container-section2 {
     display: flex;
     flex-direction: column;
     flex-basis: 200px;
@@ -180,22 +178,44 @@ article {
     flex-shrink: 1;
 }
 
-.inner-container2 {
+
+article {
     display: flex;
-    padding: 80px;
+    justify-content: center;
+}
+
+
+.inner-container-section2 {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    flex-grow: 1;
 
 }
 
-.inner-container3 {
+.inner-container2-section2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 50px;
     width: 40%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.image-wrapper img {
+    width: 100%;
 }
 
 
-.middle-container {
+.inner-container-section2:nth-child(2) {
     display: flex;
     flex-direction: row-reverse;
 }
@@ -211,7 +231,7 @@ article {
 
 /*--------------------------------section 3 -----------------*/
 
-.services {
+.container-section3 {
     display: flex;
     margin: 20px;
     flex-wrap: wrap;
@@ -220,12 +240,16 @@ article {
     padding: 50px;
 }
 
-.individual-service {
+.service-tegel {
     display: flex;
     flex-direction: column;
     border: solid #5722CD;
-    max-width: 30%;
+    width: 30%;
+    flex-basis: 250px;
     padding: 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.21);
 }
 
 .image-wrapper2 {
@@ -236,7 +260,8 @@ article {
 /*----------------------form-------------------------------*/
 
 section:nth-child(4) {
-    background-color: #4845E4;
+    background: rgb(72, 69, 228);
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(80, 50, 216, 1) 50%, rgba(87, 34, 205, 1) 100%);
 }
 
 .form {
@@ -245,6 +270,7 @@ section:nth-child(4) {
     color: white;
     text-align: center;
     padding: 50px;
+    width: 60%;
 }
 
 .form div {
@@ -262,13 +288,20 @@ form {
 }
 
 input[type=text] {
-    width: 500px;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
 input[type=submit] {
     background-color: #ED4385;
@@ -280,6 +313,19 @@ input[type=submit] {
     align-self: center;
 }
 
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+
+}
 
 /* ---------------------footer---------------------------*/
 
@@ -294,3 +340,8 @@ footer {
 
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+@media screen and (min-width: 768px) {
+    .inner-container-section2 {
+        flex-wrap: nowrap;
+    }
+}
